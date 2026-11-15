@@ -1,0 +1,39 @@
+#include <windows.h>
+#if defined(PK_MCP_HELPER)
+#define PK_DESCRIPTION "Project Keeper MCP"
+#define PK_FILENAME "ProjectKeeperMcp.exe"
+1 RT_MANIFEST "as_invoker.manifest"
+#elif defined(PK_TEST_DRIVER)
+#define PK_DESCRIPTION "Project Keeper Tests"
+#define PK_FILENAME "ProjectKeeperTests.exe"
+1 RT_MANIFEST "as_invoker.manifest"
+#else
+#define PK_DESCRIPTION "Project Keeper"
+#define PK_FILENAME "ProjectKeeper.exe"
+1 RT_MANIFEST "app.manifest"
+#endif
+#define PK_VERSION 0,6,0,0
+#define PK_VERSION_TEXT "0.6.0"
+101 ICON "app.ico"
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION PK_VERSION
+ PRODUCTVERSION PK_VERSION
+ FILEOS VOS_NT_WINDOWS32
+ FILETYPE VFT_APP
+BEGIN
+ BLOCK "StringFileInfo"
+ BEGIN
+  BLOCK "040904b0"
+  BEGIN
+   VALUE "FileDescription", PK_DESCRIPTION
+   VALUE "FileVersion", PK_VERSION_TEXT
+   VALUE "ProductName", "Project Keeper"
+   VALUE "ProductVersion", PK_VERSION_TEXT
+   VALUE "OriginalFilename", PK_FILENAME
+  END
+ END
+ BLOCK "VarFileInfo"
+ BEGIN
+  VALUE "Translation", 0x0409, 1200
+ END
+END

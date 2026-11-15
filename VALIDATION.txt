@@ -1,0 +1,12 @@
+Project Keeper 0.6.0 Preview 1 release validation
+Windows x64 build host: 10.0.26200.0
+MSVC 19.51, Windows SDK 10.0.26100.0, Release /MT
+
+Release checks passed (3 of 3).
+- Vault suite: creation, import, scan, legacy metadata, backups, Trash, recovery, history, and GitHub fixtures.
+- Desktop suite: startup and tray lifecycle, project cards, pins, forms, linked-repository displays, and board refresh after an external vault write.
+- MCP suite: all seven tools, project creation and import, notes append and replacement, stale revision detection, concurrent edits, metadata updates, and protected-project filtering.
+
+Installation checks: Windows enforced desktop elevation. The desktop restarted through its Windows sign-in task. Codex discovered all seven tools from the 0.6.0 helper.
+
+Both packaged executables passed tools/verify_imports.py. The ZIP and each executable have SHA-256 checksums in the prerelease assets.
